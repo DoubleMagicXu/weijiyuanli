@@ -1,0 +1,45 @@
+
+
+  ~Hot Keys~:
+
+    ~F1~:       Help
+    ~F2~:       Save Program     ~Alt-~1     Go to Command Window
+    ~F3~:       Load Program     ~Alt-~2     Go to Program Window
+    ~F4~:       Modify CS:IP     ~Alt-~3     Go to CPU Window
+    ~F5~:       Reset            ~Alt-~4     Go to Flag Window
+    ~F6~:       Change Windows   ~Alt-~5     Go to Stack Window
+    ~F7~:       Trace            ~Alt-~6     Go to Memory Window
+    ~F8~:       Single Step      ~Alt-~X     Exit
+    ~F9~:       Go
+    ~F10~:      Menu
+
+
+
+  ~Commands~:
+                  ~Register Command:~
+    ~R~                         Read CPU Registers:
+                           AX,BX,CX,DX,SI,DI,BP,SP,DS,ES,SS,CS,IP,F
+    ~PSW~ data                  Modify PSW
+    ~PC~ addr                   Modify CS:IP
+    ~IN~ addr                   Input a byte in addr
+    ~OUT~ addr,data             Output data to addr
+
+                  ~Memory Command:~
+    ~FM~ addr,data              Modify Memory (Byte/Word)
+    ~FM~ addr1,addr2,data       Fill data in [addr1--addr2] (B/W)
+    ~MV~ addr1,addr2,addr3      Move Memory [addr1,addr2]->addr3
+*   ~PA~ addr                   Change Program Window Address
+*   ~DA~ addr                   Change Memory Window Address
+
+                  ~Run & Breakpoint Command:~
+    ~S~                         Single Step
+*   ~S~ n                       Trace n Instruction
+    ~G~                         Go From CS:IP until breakpoint(s)
+    ~G~ addr                    Go From addr to breakpoint(s)
+    ~G~ addr,bkaddr             Go From addr,add a break at bkaddr
+    ~EX~                        Execute from Current CS:IP
+    ~EX~ addr                   Execute from addr
+
+                   ~System  Command:~
+*   ~BEEP~[+|-]                 System sound effect
+
